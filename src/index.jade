@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Quiz-App
+  link(rel="stylesheet", href="assets/css/app.css")
+  script(tyhpe="text/javascript" src= 'https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.min.js')
+body
+
+  #main-container
+    .title
+      h1 Harry Potter Quiz
+    .quiz-finished(v-show="isQuizFinished")
+      img(src="assets/image/clapping.gif", alt="")
+      h2 You Got {{finalScore()}} Correct
+      a(href="/").btn Try again?
+    .sub-container(v-show="isQuizActive")
+      .question
+        p {{ quiz[current].question }}
+      .answer-container
+        .option(v-for='option in quiz[current].options')
+          input(type="radio" id="{{$index}}" name="radio")
+          label(for="{{$index}}" @click="selectAnswer"){{ option }}
+
+      .next
+        button.btn(@click="nextQuestion") Next Question &gt;
+
+  script(tyhpe="text/javascript" src='assets/js/quiz-questions.js')
+  script(tyhpe="text/javascript" src='assets/js/app.js')

@@ -1,0 +1,114 @@
+body {
+  background-color: grey;
+}
+
+#main-container {
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  margin: 100px auto;
+  background-color: #FFF;
+  text-align: center;
+}
+
+#main-container .title {
+  border-bottom: 1px solid lightgrey;
+}
+
+#main-container .title h1 {
+  padding-top: 10px;
+  margin: 10px;
+}
+
+#main-container .sub-container {
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  transition: all 1s ease-in-out;
+}
+
+#main-container .answer-container {
+  margin-bottom: 3px;
+}
+
+#main-container .answer-container label {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+  padding: 0 0;
+  width: 94%;
+  display: inline-block;
+  margin-bottom: 4px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.42857143;
+  transition: all 400ms ease-in-out;
+}
+
+#main-container .answer-container label:hover {
+  background-color: lightgrey;
+}
+
+#main-container .answer-container input {
+  display: none;
+}
+
+#main-container .answer-container .correct, #main-container .answer-container .correct:hover {
+  background-color: lightgreen;
+}
+
+#main-container .answer-container .incorrect, #main-container .answer-container .incorrect:hover {
+  background-color: red;
+}
+
+#main-container .question {
+  padding: 15px 2px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.66);
+  color: #FFF;
+  font-size: 23px;
+  border-bottom: solid 3px #8E8E8E;
+  border-top: solid 3px #8E8E8E;
+}
+
+#main-container .next {
+  padding: 18px 0px 0px;
+  border-top: 1px solid lightgrey;
+}
+
+#main-container .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #2e6da4;
+  border-radius: 4px;
+  color: #FFF;
+  background-color: rgba(52, 146, 68, 0.82);
+}
+
+#main-container .btn:hover, #main-container .btn:focus {
+  background-color: rgba(52, 146, 68, 0.99);
+}
+
+#main-container .quiz-finished {
+  position: relative;
+  min-height: 300px;
+}
+
+#main-container .quiz-finished a {
+  position: relative;
+  bottom: 15px;
+  margin-top: 26px;
+  text-decoration: none;
+}
+
+#main-container .quiz-finished img {
+  margin-top: 15px;
+}

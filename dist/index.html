@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Quiz-App</title>
+  <link rel="stylesheet" href="assets/css/app.css"/>
+  <script tyhpe="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.min.js"></script>
+</head>
+<body>
+  <div id="main-container">
+    <div class="title">
+      <h1>Harry Potter Quiz</h1>
+    </div>
+    <div v-show="isQuizFinished" class="quiz-finished"><img src="assets/image/clapping.gif" alt=""/>
+      <h2>You Got {{finalScore()}} Correct</h2><a href="/" class="btn">Try again?</a>
+    </div>
+    <div v-show="isQuizActive" class="sub-container">
+      <div class="question">
+        <p>{{ quiz[current].question }}</p>
+      </div>
+      <div class="answer-container">
+        <div v-for="option in quiz[current].options" class="option">
+          <input type="radio" id="{{$index}}" name="radio"/>
+          <label for="{{$index}}" @click="selectAnswer">{{ option }}</label>
+        </div>
+      </div>
+      <div class="next">
+        <button @click="nextQuestion" class="btn">Next Question &gt;</button>
+      </div>
+    </div>
+  </div>
+  <script tyhpe="text/javascript" src="assets/js/quiz-questions.js"></script>
+  <script tyhpe="text/javascript" src="assets/js/app.js"></script>
+</body>
