@@ -13,7 +13,7 @@ body
     .quiz-finished(v-show="isQuizFinished")
       img(src="assets/image/clapping.gif", alt="")
       h2 You Got {{finalScore()}} Correct
-      a(href="/").btn Try again?
+      a(href="index.html").btn Try again?
     .sub-container(v-show="isQuizActive")
       .question
         p {{ quiz[current].question }}
