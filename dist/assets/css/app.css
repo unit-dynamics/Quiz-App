@@ -2,6 +2,16 @@ body {
   background-color: grey;
 }
 
+:root {
+  font-size: 16px;
+}
+
+@media (max-width: 414px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
 #main-container {
   max-width: 600px;
   border-radius: 5px;
@@ -11,13 +21,26 @@ body {
   text-align: center;
 }
 
+@media (max-width: 414px) {
+  #main-container {
+    margin: 20px auto;
+  }
+}
+
 #main-container .title {
   border-bottom: 1px solid lightgrey;
 }
 
 #main-container .title h1 {
+  font-size: 2rem;
   padding-top: 10px;
   margin: 10px;
+}
+
+@media (max-width: 414px) {
+  #main-container .title h1 {
+    font-size: 1.5rem;
+  }
 }
 
 #main-container .sub-container {
@@ -25,6 +48,7 @@ body {
   margin-bottom: 20px;
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
+  border-radius: 5px;
   transition: all 1s ease-in-out;
 }
 
@@ -33,7 +57,7 @@ body {
 }
 
 #main-container .answer-container label {
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
   list-style: none;
@@ -50,6 +74,12 @@ body {
   background-color: lightgrey;
 }
 
+@media (max-width: 414px) {
+  #main-container .answer-container label {
+    padding: 7px 0;
+  }
+}
+
 #main-container .answer-container input {
   display: none;
 }
@@ -63,11 +93,11 @@ body {
 }
 
 #main-container .question {
-  padding: 15px 2px;
+  padding: 15px 4px;
   margin-bottom: 10px;
   background-color: rgba(0, 0, 0, 0.66);
   color: #FFF;
-  font-size: 23px;
+  font-size: 1.4rem;
   border-bottom: solid 3px #8E8E8E;
   border-top: solid 3px #8E8E8E;
 }
@@ -80,7 +110,7 @@ body {
 #main-container .btn {
   display: inline-block;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.42857143;
   text-align: center;
@@ -105,7 +135,6 @@ body {
 #main-container .quiz-finished a {
   position: relative;
   bottom: 15px;
-  margin-top: 26px;
   text-decoration: none;
 }
 

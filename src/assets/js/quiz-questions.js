@@ -77,7 +77,7 @@ var hpQuiz = [{
 
 { 
   "question": "How many times do Fred and George's fireworks multiply by if you try to vanish them?",
-  "options": ["15", "20", "10", "25"],
+  "options": ["25", "20", "10", "15"],
   "answer": 2,
   "isAnswered": false 
 },
